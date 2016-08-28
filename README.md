@@ -2,7 +2,7 @@
 
 This is a demo project for uploading Apache access log to a rest service.
 
-# Prerequisites
+# Running Env.
 * CentOS 7
 * Apache
 
@@ -27,4 +27,18 @@ This is a demo project for uploading Apache access log to a rest service.
   $ unzip logstash-2.3.4.zip
   $ cd logstash-2.3.4
   $ ./bin/logstash -f ../logstashconf/apache2rest.conf
+  ```
+
+  Note that the above access log need to use default log format and path. Otherwise update the Logstash config accordingly.
+
+# Test
+
+* Ping Apache server (we should see access log rolling)
+  ```sh
+  $ curl http://localhost/aaa
+  ```
+
+* Check the result from rest server
+  ```sh
+  $ curl http://localhost:8080/log
   ```
