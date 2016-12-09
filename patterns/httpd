@@ -1,0 +1,4 @@
+MYURIPARAM \s*(.*?)\s* 
+MYIP %{IP}|- 
+CONTENT_LENGTH %{INT}|- 
+REFERER %{QS}|-
