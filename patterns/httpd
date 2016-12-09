@@ -3,3 +3,4 @@ MYIP %{IP}|-
 CONTENT_LENGTH %{INT}|- 
 REFERER %{QS}|-
 MYTIMESTAMP %{MONTHDAY:monthday}/%{MONTH:month}/%{YEAR:year}:%{TIME:time}%{SPACE}%{INT:timezone}
+MYUSERNAME %{USERNAME}|(%{USERNAME}/%{USERNAME})
