@@ -6,7 +6,10 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE")
     }
 }
-apply plugin: 'java'
+plugins {
+    id 'java'
+    id 'maven'
+}
 apply plugin: 'spring-boot'
 
 // In this section you declare where to find the dependencies of your project
@@ -29,3 +32,6 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:1.4.0.RELEASE")
     compileOnly "org.projectlombok:lombok:1.16.8"
 }
+
+group = 'tk.hongkailiu.test'
+install.dependsOn(bootRepackage)
