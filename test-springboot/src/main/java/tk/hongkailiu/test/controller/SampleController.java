@@ -35,9 +35,9 @@ public class SampleController {
 
     @RequestMapping(value = "/log", method = RequestMethod.POST)
     @ResponseStatus( HttpStatus.CREATED )
-    public @ResponseBody void post(@RequestBody LogEntry logEntry) {
-        System.out.println("====:" + logEntry.getTime());
-        logEntries.add(logEntry);
+    public @ResponseBody void post(@RequestBody String logEntry) {
+        System.out.println("====:" + logEntry);
+        //logEntries.add(logEntry);
         //HttpHeaders headers = new HttpHeaders();
         //headers.setLocation(ucBuilder.path("/user/{id}").buildAndExpand(user.getId()).toUri());
         //return new ResponseEntity<>(headers, HttpStatus.CREATED);
